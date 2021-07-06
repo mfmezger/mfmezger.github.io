@@ -14,15 +14,15 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2.5.0
+        uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: latest
 
       - name: Build local ./exampleSite
-        run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir /themes/hugo-scroll --baseURL https://mfmezger.github.io/
+        run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL https://mfmezger.github.io/hugo-scroll/
 
       - name: Deploy to GitHub Pages
         if: github.event_name == 'push'
