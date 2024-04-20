@@ -14,4 +14,4 @@ description = "This is my personal Website."
 name = "Marc Fabian Mezger"
 links = [ { email = "marc.mezger@gmail.com" }, { github = "https://github.com/mfmezger" }, { linkedin = "https://www.linkedin.com/in/marc-fabian-mezger/" } ]
 headline = "AI Engineer"
-bio = ""
+bio = "I am mainly working on Large Language Models Integrations and Retrieval Augmented Generation."
