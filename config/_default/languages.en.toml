@@ -1,24 +1,17 @@
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Lowkey Blowfish"
+title = "Marc Fabian Mezger"
 
 [params]
-  displayName = "EN"
-  isoCode = "en"
-  rtl = false
-  # logo = "img/logo.png"
-  description = "My awesome website"
-  # copyright = "Copy, _right?_ :thinking_face:"
-  dateFormat = "2 January 2006"
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+description = "This is my personal Website."
 
 [author]
-  name = "Blue Blowfish"
-  image = "img/avatar.png"
-  headline = "This is my very simple profile website with my links"
-  bio = "A little bit about you"
-   links = [
-     { link = "https://nunocoracao.github.io/blowfish/" },
-     { github = "https://github.com/nunocoracao/blowfish" },
-     { x-twitter = "https://twitter.com/burufugu" }
-   ]
+name = "Marc Fabian Mezger"
+links = [ { email = "marc.mezger@gmail.com" }, { github = "https://github.com/mfmezger" }, { linkedin = "https://www.linkedin.com/in/marc-fabian-mezger/" } ]
+headline = "AI Engineer"
+bio = ""
