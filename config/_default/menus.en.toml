@@ -11,33 +11,38 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "Blog"
-  pageRef = "posts"
+  name = "CV"
+  pageRef = "cv"
   weight = 10
 
 [[main]]
-  name = "Tags"
+  name = "Projects"
   pageRef = "tags"
   weight = 20
 
 [[main]]
   identifier = "web"
   pre = "link"
-  url = "https://nunocoracao.github.io/blowfish/"
+  url = "https://mfmezger.github.io"
   weight = 40
 
 [[main]]
   identifier = "github"
   pre = "github"
-  url = "https://github.com/nunocoracao/blowfish"
+  url = "https://github.com/mfmezger"
   weight = 50
 
 [[main]]
   identifier = "twitter"
   pre = "twitter"
-  url = "https://twitter.com/burufugu"
+  url = "https://twitter.com/mfmezger"
   weight = 60
 
+[[main]]
+  identifier = "linkedin"
+  pre = "linkedin"
+  url = "https://www.linkedin.com/in/marc-fabian-mezger/"
+  weight = 60
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
