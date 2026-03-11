@@ -19,6 +19,10 @@ npm run dev      # Start dev server
 npm run build    # Build for production
 ```
 
+## Acknowledgments
+
+This site was built using the [personal website template](https://github.com/mldangelo/personal-site) by [Michael D'Angelo](https://github.com/mldangelo).
+
 ## License
 
 [MIT](./LICENSE).
