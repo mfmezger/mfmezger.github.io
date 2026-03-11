@@ -21,6 +21,16 @@ const data: Project[] = [
     featured: true,
   },
   {
+    title: 'AI Agent Dotfiles',
+    subtitle: 'Modern AI Orchestration Setup',
+    link: 'https://github.com/mfmezger/ai_agent_dotfiles',
+    image: '',
+    date: '2025-01-01',
+    desc: 'A collection of configuration files and scripts optimized for building and running AI agents. Features automated setup for agentic environments.',
+    tech: ['Bash', 'Python', 'AI Agents', 'DevOps'],
+    featured: true,
+  },
+  {
     title: 'LLM Engineering Template',
     subtitle: 'Quickstart for AI Engineering',
     link: 'https://github.com/mfmezger/llm-engineering-template',
