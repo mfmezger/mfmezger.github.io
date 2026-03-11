@@ -13,11 +13,7 @@ export default function Job({ data }: JobProps) {
   return (
     <article className="jobs-container">
       <header>
-        <h4>
-          <a href={url}>{name}</a> - {position}
-        </h4>
         <p className="daterange">
-          {' '}
           <time dateTime={startDate}>
             {dayjs(startDate).format('MMMM YYYY')}
           </time>{' '}
@@ -28,6 +24,9 @@ export default function Job({ data }: JobProps) {
             'Present'
           )}
         </p>
+        <h4>
+          <a href={url}>{name}</a> - {position}
+        </h4>
       </header>
       {summary ? (
         <Markdown

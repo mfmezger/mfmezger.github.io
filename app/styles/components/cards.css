@@ -250,15 +250,18 @@
   margin-bottom: 0;
 }
 
-.jobs-container header h4 {
-  font-size: var(--text-xl);
-  font-weight: var(--font-weight-black);
-  margin-bottom: 1.25rem;
-  line-height: 1.3;
+.jobs-container header {
   display: block;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--color-border);
-  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.jobs-container header h4 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-black);
+  margin-bottom: 0;
+  line-height: 1.3;
 }
 
 .jobs-container header h4 a {
