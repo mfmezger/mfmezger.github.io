@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 import routes from '@/data/routes';
 
 import Hamburger from './Hamburger';
-import ThemeToggle from './ThemeToggle';
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -19,7 +18,7 @@ export default function Navigation() {
   return (
     <header className="site-header">
       <Link href="/" className="site-logo">
-        <span className="logo-text">MD</span>
+        <span className="logo-text">MFM</span>
       </Link>
 
       <nav className="nav-links">
@@ -38,7 +37,6 @@ export default function Navigation() {
       </nav>
 
       <div className="nav-actions">
-        <ThemeToggle />
         <Hamburger />
       </div>
     </header>

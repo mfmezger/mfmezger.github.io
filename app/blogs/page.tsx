@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageWrapper from '@/components/Template/PageWrapper';
-import writing from '@/data/writing';
+import blogs from '@/data/blogs';
 import { getAllPosts } from '@/lib/posts';
 import { formatDate } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Writing',
-  description: 'Articles on AI security, LLM red teaming, and trust & safety.',
+  title: 'Blogs',
+  description: 'Publications and articles by Marc Fabian Mezger on AI, RAG, and Medical Computer Science.',
   alternates: {
     types: {
       'application/rss+xml': '/feed.xml',
@@ -24,23 +24,23 @@ interface UnifiedItem {
 }
 
 // Extracted component to reduce duplication
-interface WritingItemProps {
+interface BlogsItemProps {
   item: UnifiedItem;
   showDate?: boolean;
 }
 
-function WritingItem({ item, showDate = true }: WritingItemProps) {
+function BlogsItem({ item, showDate = true }: BlogsItemProps) {
   const content = (
     <>
       {showDate && item.date && (
-        <time className="writing-date" dateTime={item.date}>
+        <time className="blogs-date" dateTime={item.date}>
           {formatDate(item.date)}
         </time>
       )}
-      <h2 className="writing-title">{item.title}</h2>
-      <p className="writing-description">{item.description}</p>
+      <h2 className="blogs-title">{item.title}</h2>
+      <p className="blogs-description">{item.description}</p>
       {item.isExternal && (
-        <span className="writing-external" aria-hidden="true">
+        <span className="blogs-external" aria-hidden="true">
           ↗
         </span>
       )}
@@ -53,7 +53,7 @@ function WritingItem({ item, showDate = true }: WritingItemProps) {
         href={item.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="writing-item"
+        className="blogs-item"
       >
         {content}
       </a>
@@ -61,25 +61,25 @@ function WritingItem({ item, showDate = true }: WritingItemProps) {
   }
 
   return (
-    <Link href={item.url} className="writing-item">
+    <Link href={item.url} className="blogs-item">
       {content}
     </Link>
   );
 }
 
-export default function WritingPage() {
+export default function BlogsPage() {
   // Get internal posts from markdown files
   const internalPosts = getAllPosts();
   const internalItems: UnifiedItem[] = internalPosts.map((post) => ({
     title: post.title,
-    url: `/writing/${post.slug}`,
+    url: `/blogs/${post.slug}`,
     date: post.date,
     description: post.description,
     isExternal: false,
   }));
 
   // Get external articles from data file
-  const externalItems: UnifiedItem[] = writing.map((item) => ({
+  const externalItems: UnifiedItem[] = blogs.map((item) => ({
     ...item,
     isExternal: true,
   }));
@@ -93,13 +93,13 @@ export default function WritingPage() {
 
   return (
     <PageWrapper>
-      <article className="writing-page">
-        <header className="writing-header">
-          <div className="writing-header-row">
-            <h1 className="page-title">Writing</h1>
+      <article className="blogs-page">
+        <header className="blogs-header">
+          <div className="blogs-header-row">
+            <h1 className="page-title">Blogs</h1>
             <a
               href="/feed.xml"
-              className="writing-rss-link"
+              className="blogs-rss-link"
               title="RSS Feed"
               aria-label="RSS Feed"
             >
@@ -108,16 +108,16 @@ export default function WritingPage() {
           </div>
         </header>
 
-        <div className="writing-list">
+        <div className="blogs-list">
           {dated.map((item) => (
-            <WritingItem key={item.url} item={item} />
+            <BlogsItem key={item.url} item={item} />
           ))}
 
           {undated.length > 0 && (
             <>
-              <div className="writing-section-label">Guides</div>
+              <div className="blogs-section-label">Guides</div>
               {undated.map((item) => (
-                <WritingItem key={item.url} item={item} showDate={false} />
+                <BlogsItem key={item.url} item={item} showDate={false} />
               ))}
             </>
           )}

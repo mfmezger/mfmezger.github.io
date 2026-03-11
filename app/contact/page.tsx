@@ -7,7 +7,7 @@ import PageWrapper from '@/components/Template/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: "Contact Michael D'Angelo via email @ hi@mldangelo.com",
+  description: "Contact Marc Fabian Mezger via email @ hi@gmail.com",
 };
 
 export default function ContactPage() {
@@ -16,19 +16,14 @@ export default function ContactPage() {
       <section className="contact-page">
         <header className="contact-header">
           <h1 className="page-title">Get in Touch</h1>
+          <p className="contact-summary">
+            Feel free to reach out via any of the channels below.
+          </p>
         </header>
 
         <div className="contact-content">
-          <div className="contact-email-block">
-            <EmailLink />
-            <p className="contact-hint">Usually respond within 24 hours</p>
-          </div>
-
-          <div className="contact-divider">
-            <span>or find me on</span>
-          </div>
-
           <ContactIcons />
+          <p className="contact-hint">Usually respond within 24 hours</p>
         </div>
       </section>
     </PageWrapper>

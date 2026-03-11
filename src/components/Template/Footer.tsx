@@ -13,12 +13,12 @@ export default function Footer() {
             <ThemePortrait width={80} height={80} />
           </Link>
           <div className="footer-info">
-            <h3>Michael D&apos;Angelo</h3>
-            <p className="footer-role">CTO & Co-founder</p>
+            <h3>Marc Fabian Mezger</h3>
+            <p className="footer-role">AI Engineer</p>
             <p className="footer-copyright">
-              &copy; {new Date().getFullYear()} ·{' '}
+              <span title="The Emperor protects.">&copy;</span> {new Date().getFullYear()} ·{' '}
               <a
-                href="https://github.com/mldangelo/personal-site"
+                href="https://github.com/mfmezger/mfmezger.github.io"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -38,7 +38,7 @@ Work through these steps in order for the smoothest experience.
 | Work experience     | `src/data/resume/work.ts`    |
 | Education           | `src/data/resume/degrees.ts` |
 | Skills & categories | `src/data/resume/skills.ts`  |
-| Courses (optional)  | `src/data/resume/courses.ts` |
+| Certifications (optional)  | `src/data/resume/courses.ts` |
 
 ### Step 4: Projects
 
@@ -81,11 +81,9 @@ Then remove the "Writing" link from `src/data/routes.ts`.
 
 ### Step 7: Final Cleanup
 
-Search the codebase for "Michael" or "mldangelo" to find any remaining references to change.
-
+Search the codebase for "Marc" or "mfmezger" to find any remaining references to change.
 ```bash
-grep -r "Michael" src/
-grep -r "mldangelo" .
+grep -r "mfmezger" .
 ```
 
 ## Deployment
@@ -152,7 +150,7 @@ Edit `app/tailwind.css`. Find `:root` (light mode) and `[data-theme="dark"]` (da
 
 ## Getting Help
 
-- Open an issue: https://github.com/mldangelo/personal-site/issues
-- Email: help@mldangelo.com
+- Open an issue: https://github.com/mfmezger/mfmezger.github.io/issues
+- Email: marc.mezger@gmail.com
 
 If you find bugs or unclear instructions, please submit a PR—contributions help everyone.

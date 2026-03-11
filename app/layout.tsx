@@ -27,7 +27,7 @@ const raleway = Raleway({
 });
 
 const siteDescription =
-  'Co-founder & CTO building LLM security tools. Previously VP Engineering, YC alum, Stanford ICME.';
+  'Domain Engineering Lead for Generative AI & NLP at Schwarz Digits. AI Architect & AI Engineer specializing in RAG and Agentic Workflows.';
 
 export const metadata: Metadata = {
   title: {
@@ -37,11 +37,12 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: [
     AUTHOR_NAME,
-    'LLM security',
-    'machine learning',
-    'CTO',
-    'startup founder',
-    'YC',
+    'LLM',
+    'RAG',
+    'AI Architect',
+    'Generative AI',
+    'AI Engineer',
+    'Heidelberg University',
   ],
   authors: [{ name: AUTHOR_NAME }],
   creator: AUTHOR_NAME,
@@ -92,13 +93,17 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${sourceSans.variable} ${raleway.variable}`}
+      data-theme="dark"
       suppressHydrationWarning
     >
       <head>
-        {/* CSP-safe theme initialization - prevents flash on load */}
+        {/* Enforce dark mode theme initialization */}
         <Script id="theme-init" strategy="beforeInteractive">
-          {`(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t)}else if(window.matchMedia('(prefers-color-scheme:dark)').matches){document.documentElement.setAttribute('data-theme','dark')}else{document.documentElement.setAttribute('data-theme','light')}}catch(e){}})();`}
+          {`document.documentElement.setAttribute('data-theme', 'dark');
+            console.log("The Emperor protects.");`}
         </Script>
+        {/* For the Golden Throne */}
+        <meta name="warhammer-easter-egg" content="The Emperor protects." />
       </head>
       <body>
         <ScrollToTop />

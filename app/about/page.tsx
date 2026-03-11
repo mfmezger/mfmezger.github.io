@@ -7,7 +7,7 @@ import { aboutMarkdown } from '@/data/about';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    "Learn about Michael D'Angelo - Co-founder & CTO building LLM security tools.",
+    "Learn about Marc Fabian Mezger - Domain Engineering Lead for Generative AI & NLP at Schwarz Digits. AI Architect & AI Engineer specialized in RAG and Agentic Workflows.",
 };
 
 const countWords = (str: string) =>

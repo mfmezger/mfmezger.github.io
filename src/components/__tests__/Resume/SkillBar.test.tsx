@@ -5,7 +5,7 @@ import SkillBar from '../../Resume/Skills/SkillBar';
 
 const mockCategories = [
   { name: 'Languages', color: '#6968b3', textColor: 'light' as const },
-  { name: 'ML Engineering', color: '#37b1f5', textColor: 'dark' as const },
+  { name: 'AI Engineering', color: '#37b1f5', textColor: 'dark' as const },
 ];
 
 describe('SkillBar', () => {

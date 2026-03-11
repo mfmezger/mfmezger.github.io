@@ -29,7 +29,7 @@ describe('EmailLink', () => {
   it('renders the email domain', () => {
     render(<EmailLink />);
 
-    expect(screen.getByText('@mldangelo.com')).toBeInTheDocument();
+    expect(screen.getByText('@gmail.com')).toBeInTheDocument();
   });
 
   it('renders as a link element', () => {
@@ -47,9 +47,9 @@ describe('EmailLink', () => {
       await Promise.resolve();
     });
 
-    // Initial state shows 'hi' as default (accessibility: never show empty)
+    // Initial state shows 'marc.mezger' as default (accessibility: never show empty)
     const prefix = document.querySelector('.contact-email-prefix');
-    expect(prefix?.textContent).toBe('hi');
+    expect(prefix?.textContent).toBe('marc.mezger');
 
     // Advance through multiple messages to verify animation works
     // Each message takes ~50 chars + 50 hold ticks at 50ms each
@@ -128,7 +128,7 @@ describe('EmailLink', () => {
     });
 
     const link = screen.getByRole('link');
-    expect(link.getAttribute('href')).toBe('mailto:hi@mldangelo.com');
+    expect(link.getAttribute('href')).toBe('mailto:marc.mezger@gmail.com');
   });
 
   it('has invalid class when email prefix is invalid', async () => {

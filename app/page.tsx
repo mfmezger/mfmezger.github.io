@@ -6,7 +6,7 @@ import PageWrapper from '@/components/Template/PageWrapper';
 
 export const metadata: Metadata = {
   description:
-    'Co-founder & CTO at Promptfoo building LLM security tools. Previously VP Engineering at Smile ID. YC alum, Stanford ICME.',
+    'Domain Engineering Lead for Generative AI & NLP at Schwarz Digits. AI Architect & AI Engineer specializing in RAG and Agentic Workflows.',
 };
 
 export default function HomePage() {

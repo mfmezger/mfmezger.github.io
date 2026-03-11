@@ -19,7 +19,7 @@ export interface Post {
   draft?: boolean;
 }
 
-const postsDirectory = path.join(process.cwd(), 'content/writing');
+const postsDirectory = path.join(process.cwd(), 'content/blogs');
 
 export function getPostSlugs(): string[] {
   if (!fs.existsSync(postsDirectory)) {

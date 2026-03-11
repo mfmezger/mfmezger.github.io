@@ -5,7 +5,7 @@ import SkillTag from '../../Resume/Skills/SkillTag';
 
 const mockCategories = [
   { name: 'Languages', color: '#6968b3', textColor: 'light' as const },
-  { name: 'ML Engineering', color: '#37b1f5', textColor: 'dark' as const },
+  { name: 'AI Engineering', color: '#37b1f5', textColor: 'dark' as const },
 ];
 
 describe('SkillTag', () => {
@@ -61,7 +61,7 @@ describe('SkillTag', () => {
     const skill = {
       title: 'Python',
       competency: 5,
-      category: ['Languages', 'ML Engineering'],
+      category: ['Languages', 'AI Engineering'],
     };
 
     render(<SkillTag data={skill} categories={mockCategories} />);

@@ -6,10 +6,10 @@ interface CourseProps {
 
 export default function Course({ data }: CourseProps) {
   return (
-    <li className="course-container">
-      <a href={data.link}>
-        <h4 className="course-number">{data.number}:</h4>
-        <p className="course-name">{data.title}</p>
+    <li className="certification-container">
+      <a href={data.link} target="_blank" rel="noopener noreferrer">
+        <span className="certification-number">{data.university}</span>
+        <span className="certification-name">{data.title}</span>
       </a>
     </li>
   );

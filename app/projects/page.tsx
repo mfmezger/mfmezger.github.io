@@ -5,9 +5,9 @@ import PageWrapper from '@/components/Template/PageWrapper';
 import data from '@/data/projects';
 
 export const metadata: Metadata = {
-  title: 'Archive',
+  title: 'Projects',
   description:
-    "Early projects and experiments from Michael D'Angelo (2015 and earlier).",
+    "Recent and early projects by Marc Fabian Mezger in AI, RAG, and AI Engineering.",
 };
 
 export default function ProjectsPage() {
@@ -18,15 +18,15 @@ export default function ProjectsPage() {
     <PageWrapper>
       <section className="projects-page">
         <header className="projects-header">
-          <h1 className="page-title">Archive</h1>
+          <h1 className="page-title">Projects</h1>
           <p className="page-subtitle">
-            Early projects and experiments from my student years
+            Selected work, open-source projects, and technical templates.
           </p>
         </header>
 
         {featuredProjects.length > 0 && (
           <section className="projects-featured">
-            <h2 className="projects-section-title">Hackathons &amp; Awards</h2>
+            <h2 className="projects-section-title">Featured Projects</h2>
             <div className="projects-grid projects-grid--featured">
               {featuredProjects.map((project) => (
                 <Cell data={project} key={project.title} />

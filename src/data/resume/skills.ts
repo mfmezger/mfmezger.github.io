@@ -12,137 +12,145 @@ export interface Category {
 }
 
 const skills: Skill[] = [
-  // Languages
+  // AI Engineering (Priority order: RAG, Agentic AI, Pydantic AI)
   {
-    title: 'Python',
+    title: 'RAG (Retrieval Augmented Generation)',
     competency: 5,
-    category: ['Languages', 'ML Engineering'],
+    category: ['AI Engineering'],
   },
   {
-    title: 'TypeScript',
+    title: 'Agentic AI / AI Agents',
     competency: 5,
-    category: ['Languages', 'Web Development'],
+    category: ['AI Engineering'],
   },
   {
-    title: 'SQL',
+    title: 'PydanticAI',
+    competency: 5,
+    category: ['AI Engineering'],
+  },
+  {
+    title: 'Large Language Models (LLMs)',
+    competency: 5,
+    category: ['AI Engineering'],
+  },
+  {
+    title: 'Structured Outputs',
+    competency: 5,
+    category: ['AI Engineering'],
+  },
+  {
+    title: 'MLOps/LLMOps',
     competency: 4,
-    category: ['Languages', 'Databases'],
-  },
-  // AI & LLM
-  {
-    title: 'AI Agents',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'LLM Evaluation',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'AI Red-teaming',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'LLM APIs',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'RAG',
-    competency: 4,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Prompt Engineering',
-    competency: 4,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Vector Databases',
-    competency: 4,
-    category: ['ML Engineering', 'Databases'],
+    category: ['AI Engineering', 'Infrastructure'],
   },
   {
     title: 'PyTorch',
+    competency: 5,
+    category: ['AI Engineering'],
+  },
+  {
+    title: 'Hugging Face Transformers / smolagents',
+    competency: 5,
+    category: ['AI Engineering'],
+  },
+  {
+    title: 'CrewAI',
+    competency: 5,
+    category: ['AI Engineering'],
+  },
+  {
+    title: 'OpenAI / Anthropic (Claude)',
+    competency: 5,
+    category: ['AI Engineering'],
+  },
+  {
+    title: 'Computer Vision',
     competency: 4,
-    category: ['ML Engineering'],
+    category: ['AI Engineering'],
   },
   {
-    title: 'Pandas',
-    competency: 5,
-    category: ['ML Engineering', 'Data Engineering'],
+    title: 'Langchain',
+    competency: 4,
+    category: ['AI Engineering'],
   },
-  // Web Development
   {
-    title: 'Node.js',
-    competency: 5,
-    category: ['Web Development'],
+    title: 'Weights & Biases',
+    competency: 4,
+    category: ['AI Engineering'],
   },
+  {
+    title: 'Scikit-Learn',
+    competency: 4,
+    category: ['AI Engineering'],
+  },
+  // Programming Languages
+  {
+    title: 'Python',
+    competency: 5,
+    category: ['Languages', 'AI Engineering'],
+  },
+  {
+    title: 'Go',
+    competency: 4,
+    category: ['Languages'],
+  },
+  {
+    title: 'Javascript/Typescript',
+    competency: 4,
+    category: ['Languages', 'Web Development'],
+  },
+  {
+    title: 'Java',
+    competency: 3,
+    category: ['Languages'],
+  },
+  // Web & API
   {
     title: 'FastAPI',
-    competency: 4,
+    competency: 5,
     category: ['Web Development'],
   },
+  // Databases (Priority: Vector Databases, PostgreSQL)
   {
-    title: 'Next.js',
-    competency: 3,
-    category: ['Web Development'],
+    title: 'Vector Databases (Qdrant, MongoDB Atlas)',
+    competency: 4,
+    category: ['AI Engineering', 'Databases'],
   },
-  // Databases
   {
     title: 'PostgreSQL',
     competency: 4,
     category: ['Databases'],
   },
+  // Cloud & Infrastructure
   {
-    title: 'Redis',
-    competency: 3,
-    category: ['Databases'],
+    title: 'GCP',
+    competency: 4,
+    category: ['Infrastructure'],
   },
-  // Infrastructure
+  {
+    title: 'Azure',
+    competency: 4,
+    category: ['Infrastructure'],
+  },
   {
     title: 'AWS',
-    competency: 4,
-    category: ['Infrastructure'],
-  },
-  {
-    title: 'Docker',
-    competency: 4,
-    category: ['Infrastructure'],
-  },
-  {
-    title: 'Kubernetes',
     competency: 3,
     category: ['Infrastructure'],
-  },
-  {
-    title: 'Observability',
-    competency: 4,
-    category: ['Infrastructure', 'ML Engineering'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 
 /**
  * Category colors with pre-computed text contrast.
- * Uses CSS custom properties defined in tailwind.css for runtime styling,
- * with textColor pre-computed from the hex values for accessibility.
- *
- * Hex values from tailwind.css @theme block:
- * --color-skill-1: #6968b3, --color-skill-2: #37b1f5, --color-skill-3: #40494e
- * --color-skill-4: #515dd4, --color-skill-5: #e47272, --color-skill-6: #cc7b94
  */
 const CATEGORY_COLORS: { color: string; textColor: 'dark' | 'light' }[] = [
-  { color: 'var(--color-skill-1)', textColor: 'light' }, // #6968b3 - dark bg
-  { color: 'var(--color-skill-2)', textColor: 'dark' }, // #37b1f5 - light bg
-  { color: 'var(--color-skill-3)', textColor: 'light' }, // #40494e - dark bg
-  { color: 'var(--color-skill-4)', textColor: 'light' }, // #515dd4 - dark bg
-  { color: 'var(--color-skill-5)', textColor: 'dark' }, // #e47272 - light bg
-  { color: 'var(--color-skill-6)', textColor: 'dark' }, // #cc7b94 - light bg
+  { color: 'var(--color-skill-1)', textColor: 'light' },
+  { color: 'var(--color-skill-2)', textColor: 'dark' },
+  { color: 'var(--color-skill-3)', textColor: 'light' },
+  { color: 'var(--color-skill-4)', textColor: 'light' },
+  { color: 'var(--color-skill-5)', textColor: 'dark' },
+  { color: 'var(--color-skill-6)', textColor: 'dark' },
 ];
 
-// Fallback colors for categories beyond the predefined set (with pre-computed contrast)
 const FALLBACK_COLORS: { color: string; textColor: 'dark' | 'light' }[] = [
   { color: '#3896e2', textColor: 'dark' },
   { color: '#c3423f', textColor: 'light' },
@@ -152,24 +160,23 @@ const FALLBACK_COLORS: { color: string; textColor: 'dark' | 'light' }[] = [
 ];
 
 /**
- * Build categories from skills with type-safe color assignment.
- * Logs a warning in development if there are more categories than colors.
+ * Build categories from skills with requested priority order.
+ * Order: AI Engineering, Databases, then the rest.
  */
 function buildCategories(skillsList: Skill[]): Category[] {
-  const uniqueCategories = Array.from(
-    new Set(skillsList.flatMap(({ category }) => category)),
+  const priorityOrder = ['AI Engineering', 'Databases'];
+
+  const otherCategories = Array.from(
+    new Set(
+      skillsList
+        .flatMap(({ category }) => category)
+        .filter((cat) => !priorityOrder.includes(cat)),
+    ),
   ).sort();
 
-  const allColors = [...CATEGORY_COLORS, ...FALLBACK_COLORS];
+  const uniqueCategories = [...priorityOrder, ...otherCategories];
 
-  if (
-    process.env.NODE_ENV === 'development' &&
-    uniqueCategories.length > allColors.length
-  ) {
-    console.warn(
-      `[skills.ts] Warning: ${uniqueCategories.length} categories but only ${allColors.length} colors defined`,
-    );
-  }
+  const allColors = [...CATEGORY_COLORS, ...FALLBACK_COLORS];
 
   return uniqueCategories.map((category, index) => {
     const colorConfig = allColors[index] ?? {

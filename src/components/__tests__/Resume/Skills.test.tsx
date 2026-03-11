@@ -5,12 +5,12 @@ import Skills from '../../Resume/Skills';
 
 const mockCategories = [
   { name: 'Languages', color: '#6968b3', textColor: 'light' as const },
-  { name: 'ML Engineering', color: '#37b1f5', textColor: 'dark' as const },
+  { name: 'AI Engineering', color: '#37b1f5', textColor: 'dark' as const },
   { name: 'Web Development', color: '#40494e', textColor: 'light' as const },
 ];
 
 const mockSkills = [
-  { title: 'Python', competency: 5, category: ['Languages', 'ML Engineering'] },
+  { title: 'Python', competency: 5, category: ['Languages', 'AI Engineering'] },
   {
     title: 'TypeScript',
     competency: 5,
@@ -21,7 +21,7 @@ const mockSkills = [
     competency: 4,
     category: ['Languages', 'Web Development'],
   },
-  { title: 'PyTorch', competency: 4, category: ['ML Engineering'] },
+  { title: 'PyTorch', competency: 4, category: ['AI Engineering'] },
   { title: 'React', competency: 3, category: ['Web Development'] },
 ];
 
@@ -42,7 +42,7 @@ describe('Skills', () => {
       screen.getByRole('button', { name: 'Languages' }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('button', { name: 'ML Engineering' }),
+      screen.getByRole('button', { name: 'AI Engineering' }),
     ).toBeInTheDocument();
     expect(
       screen.getByRole('button', { name: 'Web Development' }),
@@ -63,10 +63,10 @@ describe('Skills', () => {
   it('filters skills when category button is clicked', () => {
     render(<Skills skills={mockSkills} categories={mockCategories} />);
 
-    const mlButton = screen.getByRole('button', { name: 'ML Engineering' });
+    const mlButton = screen.getByRole('button', { name: 'AI Engineering' });
     fireEvent.click(mlButton);
 
-    // Should show ML Engineering skills
+    // Should show AI Engineering skills
     expect(screen.getByText('Python')).toBeInTheDocument();
     expect(screen.getByText('PyTorch')).toBeInTheDocument();
 
@@ -77,7 +77,7 @@ describe('Skills', () => {
   it('shows all skills when clicking category again (toggle off)', () => {
     render(<Skills skills={mockSkills} categories={mockCategories} />);
 
-    const mlButton = screen.getByRole('button', { name: 'ML Engineering' });
+    const mlButton = screen.getByRole('button', { name: 'AI Engineering' });
     fireEvent.click(mlButton);
     fireEvent.click(mlButton);
 

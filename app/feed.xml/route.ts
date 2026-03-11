@@ -1,4 +1,4 @@
-import writing from '@/data/writing';
+import blogs from '@/data/blogs';
 import { getAllPosts } from '@/lib/posts';
 import { SITE_URL } from '@/lib/utils';
 
@@ -31,13 +31,13 @@ export async function GET() {
   const internalPosts = getAllPosts();
   const internalItems: FeedItem[] = internalPosts.map((post) => ({
     title: post.title,
-    url: `${SITE_URL}/writing/${post.slug}`,
+    url: `${SITE_URL}/blogs/${post.slug}`,
     date: post.date,
     description: post.description,
   }));
 
   // Get external articles
-  const externalItems: FeedItem[] = writing
+  const externalItems: FeedItem[] = blogs
     .filter((item) => item.date)
     .map((item) => ({
       title: item.title,
@@ -67,9 +67,9 @@ export async function GET() {
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Michael D'Angelo - Writing</title>
-    <link>${SITE_URL}/writing</link>
-    <description>Articles on AI security, LLM red teaming, and trust &amp; safety by Michael D'Angelo.</description>
+    <title>Marc Fabian Mezger - Blogs</title>
+    <link>${SITE_URL}/blogs</link>
+    <description>Publications and articles by Marc Fabian Mezger on AI, RAG, and Medical Computer Science.</description>
     <language>en-us</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>${rssItems}

@@ -16,13 +16,9 @@ export default function SkillTag({ data, categories }: SkillTagProps) {
     category.includes(cat.name),
   )?.color;
 
-  // Size based on competency (5 = large, 4 = medium, 3 = small)
-  const sizeClass =
-    competency >= 5
-      ? 'skill-tag--lg'
-      : competency >= 4
-        ? 'skill-tag--md'
-        : 'skill-tag--sm';
+  // Use consistent size for all tags to avoid "broken" layout, 
+  // but keep subtle weight difference if desired
+  const sizeClass = 'skill-tag--lg';
 
   return (
     <span

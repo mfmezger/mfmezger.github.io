@@ -6,7 +6,8 @@ const sections = [
   { name: 'Experience', id: 'experience' },
   { name: 'Education', id: 'education' },
   { name: 'Skills', id: 'skills' },
-  { name: 'Courses', id: 'courses' },
+  { name: 'Certifications', id: 'certifications' },
+  { name: 'Publications', id: 'publications' },
   { name: 'References', id: 'references' },
 ] as const;
 
